@@ -45,6 +45,20 @@ UPDATE "Chatwoot" SET token = 'nuevo_token', "updatedAt" = NOW();
 
 Luego reiniciar evolution-api: `pm2 restart evolution-api`
 
+**Chatwoot "Error al enviar" — Net::ReadTimeout**: Chatwoot cierra la conexión antes de que Evolution procese el webhook. Solucionado en `src/api/integrations/chatbot/chatwoot/routes/chatwoot.router.ts`: el webhook responde inmediatamente con `202 Accepted` y procesa el mensaje en segundo plano.
+
+```bash
+# Después de modificar el código:
+npm run build
+pm2 restart evolution-api --update-env
+sudo systemctl restart nginx
+```
+
+**502 Bad Gateway**: Suele ocurrir tras reiniciar evolution-api. Solo reiniciar nginx:
+```bash
+sudo systemctl restart nginx
+```
+
 ## Comandos
 
 ```bash

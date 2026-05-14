@@ -136,7 +136,9 @@ npm run db:studio       # Abrir Prisma Studio
 | `LOG_LEVEL` | `ERROR,WARN,DEBUG,...` | Niveles de log |
 | `WEBSOCKET_ENABLED` | `false` | Habilitar Socket.IO |
 
-Ver `env.example` para todas las opciones disponibles (RabbitMQ, Kafka, SQS, S3, Chatwoot, Typebot, OpenAI, etc.).
+> **Chatwoot**: Si usas Chatwoot, asegúrate de configurar `CHATWOOT_IMPORT_DATABASE_CONNECTION_URI` apuntando a la BD de Chatwoot (`chatwoot_production`), no a la de Evolution.
+
+Ver `env.example` para todas las opciones disponibles (RabbitMQ, Kafka, SQS, S3, Chatwoot, etc.).
 
 ---
 
