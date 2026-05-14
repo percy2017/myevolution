@@ -99,12 +99,3 @@ npm run db:studio           # prisma studio
 ## Alias de importación (tsconfig paths)
 
 `@api/*` → `src/api/*`, `@config/*` → `src/config/*`, `@cache/*` → `src/cache/*`, `@utils/*` → `src/utils/*`, `@exceptions` → `src/exceptions`, `@validate/*` → `src/validate/*`, `@libs/*` → `src/libs/*`.
-
-## Convenciones
-
-- Comillas simples, sangría de 2 espacios, comas finales, ancho de 120 caracteres, punto y coma — aplicado por ESLint + Prettier.
-- Nombres de archivo `kebab-case.file.ts`, clases `PascalCase`, funciones/variables `camelCase`.
-- Commits: conventional commits (`type(scope): subject` ≤ 100 caracteres) via commitizen + commitlint.
-- Comunicación con el usuario: **Portugués (PT-BR)**. Código y respuestas de la API: Inglés.
-- No existe suite de tests (`test/` está en gitignore).
-- `strict: false`, `strictNullChecks: false`, `noImplicitAny: false` en tsconfig.
